@@ -369,7 +369,7 @@ unsigned short CcidUnblockPin (unsigned char* new_pin)
 {
     unsigned short nRet;
 
-    int new_pin_len = strlen (new_pin);
+    int new_pin_len = strlen ((char *) new_pin);
 
     // Command
     tSCT.cAPDU[CCID_CLA] = 0x00;
@@ -379,7 +379,7 @@ unsigned short CcidUnblockPin (unsigned char* new_pin)
     tSCT.cAPDU[CCID_LC] = new_pin_len;
 
     // New password
-    strcpy ((char *) &tSCT.cAPDU[CCID_DATA], new_pin);
+    strcpy ((char *) &tSCT.cAPDU[CCID_DATA], (char *) new_pin);
 
     tSCT.cAPDULength = CCID_DATA + new_pin_len;
 
@@ -897,7 +897,7 @@ uint8_t cardAuthenticate (uint8_t * password)
 unsigned short cRet;
 
     CcidSelectOpenPGPApp ();
-    cRet = CcidVerifyPin (3, password);
+    cRet = CcidVerifyPin (3, (char *) password);
 
 
     if (APDU_ANSWER_COMMAND_CORRECT != cRet)
@@ -915,7 +915,7 @@ uint8_t userAuthenticate (uint8_t * password)
 unsigned short cRet;
 
     CcidSelectOpenPGPApp ();
-    cRet = CcidVerifyPin (1, password);
+    cRet = CcidVerifyPin (1, (char *) password);
 
 
     if (APDU_ANSWER_COMMAND_CORRECT != cRet)
@@ -933,7 +933,7 @@ unsigned short cRet;
     // Reset smart card
     CcidSelectOpenPGPApp ();
 
-    cRet = CcidVerifyPin (3, password);
+    cRet = CcidVerifyPin (3, (char *) password);
     if (APDU_ANSWER_COMMAND_CORRECT != cRet)
         return 1;
 
@@ -973,7 +973,7 @@ uint8_t changeUserPin (uint8_t * password, uint8_t * new_password)
 unsigned short cRet;
 
     CcidSelectOpenPGPApp ();
-    cRet = CcidChangePin (1, password, new_password);
+    cRet = CcidChangePin (1, (char *) password, (char *) new_password);
 
 
     if (APDU_ANSWER_COMMAND_CORRECT != cRet)
@@ -991,7 +991,7 @@ uint8_t changeAdminPin (uint8_t * password, uint8_t * new_password)
 unsigned short cRet;
 
     CcidSelectOpenPGPApp ();
-    cRet = CcidChangePin (3, password, new_password);
+    cRet = CcidChangePin (3, (char *) password, (char *) new_password);
 
 
     if (APDU_ANSWER_COMMAND_CORRECT != cRet)
@@ -1143,7 +1143,7 @@ uint8_t testSendUserPW2 (unsigned char* pcPW)
     unsigned short nRet;
 
     // CI_LocalPrintf ("Send user password : ");
-    nRet = CcidVerifyPin (2, pcPW);
+    nRet = CcidVerifyPin (2, (char *) pcPW);
     if (APDU_ANSWER_COMMAND_CORRECT == nRet)
     {
         // CI_LocalPrintf ("fail\n\r");
