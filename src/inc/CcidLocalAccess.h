@@ -88,5 +88,9 @@ uint8_t testScAesKey (int nLen, unsigned char* pcKey);
 
 uint8_t testSendUserPW2 (unsigned char* pcPW);
 
+uint8_t factoryReset (uint8_t * password);
+
+unsigned short CcidVerifyPin (unsigned char cPinNr, const char* szPin);
+
 unsigned int CcidReset (void);
 #endif /* CCID_LOCAL_ACCESS */

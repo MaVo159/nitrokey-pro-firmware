@@ -28,9 +28,11 @@
 
 #include "stm32f10x.h"
 
+void GetDebug (u8 * data, unsigned int* length);
+
 u8 WriteAESStorageKeyToUserPage (u8 * data);
 
-// u8 ReadAESStorageKeyToUserPage (u8 *data);
+u8 ReadAESStorageKeyToUserPage (u8 *data);
 // u8 WriteMatrixColumsUserPWToUserPage (u8 *data);
 // u8 ReadMatrixColumsUserPWFromUserPage (u8 *data);
 // u8 WriteMatrixColumsAdminPWFromUserPage (u8 *data);
@@ -120,10 +122,11 @@ u8 WritePasswordSafeKey (u8 * data);
 u8 ReadPasswordSafeKey (u8 * data);
 
 /*
-   u8 WriteNewSdCardFoundToFlash (u32 *SdId_u32); u8 SetSdCardFilledWithRandomsToFlash (void); u8 ClearNewSdCardFoundToFlash (void); u8
-   SetSdCardNotFilledWithRandomCharsToFlash (void); u8 SetSdCardFilledWithRandomCharsToFlash (void); u8 CheckForNewFirmwareVersion (void);
+   u8 WriteNewSdCardFoundToFlash (u32 *SdId_u32); u8 SetSdCardFilledWithRandomsToFlash (void); u8 ClearNewSdCardFoundToFlash (void); u8 SetSdCardFilledWithRandomCharsToFlash (void); u8 CheckForNewFirmwareVersion (void);
+*/
+u8 SetSdCardNotFilledWithRandomCharsToFlash (void);
 
-   u8 SetStickKeysNotInitatedToFlash (void); */
+u8 SetStickKeysNotInitatedToFlash (void);
 
 u8 ClearStickKeysNotInitatedToFlash (void);
 

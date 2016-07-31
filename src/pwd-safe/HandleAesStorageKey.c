@@ -41,6 +41,7 @@
 // #include "CCID/Local_ACCESS/OpenPGP_V20.h"
 #include "FlashStorage.h"
 #include "HandleAesStorageKey.h"
+#include "password_safe.h"
 
 
 /*******************************************************************************

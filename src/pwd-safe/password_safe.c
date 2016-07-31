@@ -46,6 +46,7 @@
 #include "smartcard.h"
 #include "password_safe.h"
 #include "report_protocol.h"
+#include "hotp.h"
 
 // #include "HiddenVolume.h"
 // #include "CCID/USART/ISO7816_USART.h"
@@ -55,7 +56,7 @@
 // #include "USB_CCID/USB_CCID.h"
 #include "FlashStorage.h"
 #include "HandleAesStorageKey.h"
-// #include "OTP/keyboard.h"
+#include "keyboard.h"
 // #include "LED_test.h"
 
 /*******************************************************************************

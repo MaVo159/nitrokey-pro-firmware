@@ -36,6 +36,8 @@
 #include "CcidLocalAccess.h"
 #include "time.h"
 #include "password_safe.h"
+#include "HandleAesStorageKey.h"
+#include "FlashStorage.h"
 
 __IO uint8_t temp_password[25];
 

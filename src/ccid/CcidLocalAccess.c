@@ -30,6 +30,7 @@
 #include "CCID_Ifd_protocol.h"
 #include "CcidLocalAccess.h"
 #include "hotp.h"
+#include "FlashStorage.h"
 
 #include "time.h"
 

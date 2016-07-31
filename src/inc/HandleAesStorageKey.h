@@ -29,6 +29,8 @@
 
 #include "stm32f10x.h"
 
+u32 BuildNewAesMasterKey_u32 (u8 * AdminPW_pu8, u8 * MasterKey_pu8);
+
 u32 BuildStorageKeys_u32 (u8 * AdminPW_pu8);
 
 u32 GetStorageKey_u32 (u8 * UserPW_pu8, u8 * StorageKey_pu8);
