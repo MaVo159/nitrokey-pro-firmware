@@ -134,7 +134,7 @@ const uint8_t MASS_StringInterface[MASS_SIZ_STRING_INTERFACE] = {
     MASS_SIZ_STRING_INTERFACE,
     0x03,
     /* Interface 0: "Nitrokey SD" - 11 * 2 + 2 = 24 byte */
-    'C', 0, 'r', 0, 'y', 0, 'p', 0, 't', 0, 'o', 0, 'S', 0, 't', 0, 'i', 0,
-    'c', 0,
-    'k', 0, ' ', 0, 'S', 0, 'D'
+    'N', 0, 'i', 0, 't', 0, 'r', 0, 'o', 0, 'k', 0, 'e', 0, 'y', 0, ' ', 0,
+    'S', 0,
+    'D', 0
 };
