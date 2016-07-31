@@ -49,17 +49,6 @@ extern uint8_t HID_SetReport_Value_tmp[KEYBOARD_FEATURE_COUNT];
 
 extern uint8_t HID_GetReport_Value_tmp[KEYBOARD_FEATURE_COUNT];
 
-/* Exported constants -------------------------------------------------------- */
-#define USB_CCID_Storage_GetConfiguration          NOP_Process
-// #define USB_CCID_Storage_SetConfiguration NOP_Process //
-#define USB_CCID_Storage_GetInterface              NOP_Process
-#define USB_CCID_Storage_SetInterface              NOP_Process
-#define USB_CCID_Storage_GetStatus                 NOP_Process
-#define USB_CCID_Storage_ClearFeature              NOP_Process  //
-#define USB_CCID_Storage_SetEndPointFeature        NOP_Process
-#define USB_CCID_Storage_SetDeviceFeature          NOP_Process
-// #define USB_CCID_Storage_SetDeviceAddress NOP_Process //
-
 /* CCID Storage Requests */
 /*
    #define GET_MAX_LUN 0xFE #define CCID_STORAGE_RESET 0xFF #define LUN_DATA_LENGTH 1 */
@@ -76,6 +65,18 @@ extern uint8_t HID_GetReport_Value_tmp[KEYBOARD_FEATURE_COUNT];
 void USB_CCID_init (void);
 
 void USB_CCID_Reset (void);
+
+void USB_CCID_Storage_GetConfiguration (void);
+
+void USB_CCID_Storage_GetInterface (void);
+
+void USB_CCID_Storage_SetInterface (void);
+
+void USB_CCID_Storage_GetStatus (void);
+
+void USB_CCID_Storage_SetEndPointFeature (void);
+
+void USB_CCID_Storage_SetDeviceFeature (void);
 
 void USB_CCID_Storage_SetConfiguration (void);
 

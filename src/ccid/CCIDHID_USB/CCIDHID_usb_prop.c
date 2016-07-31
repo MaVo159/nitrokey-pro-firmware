@@ -567,6 +567,16 @@ uint8_t* USB_CCID_Get_Max_Lun (uint16_t Length)
     }
 }
 
+/*******************************************************************************
+* NOP USB_CCID* funtions
+*******************************************************************************/
+void USB_CCID_Storage_GetConfiguration (void) {};
+void USB_CCID_Storage_GetInterface (void) {};
+void USB_CCID_Storage_SetInterface (void) {};
+void USB_CCID_Storage_GetStatus (void) {};
+void USB_CCID_Storage_SetEndPointFeature (void) {};
+void USB_CCID_Storage_SetDeviceFeature (void) {};
+void USB_CCID_Storage_ClearFeature (void) {};
 
 /*******************************************************************************
 * Function Name  : Keyboard_SetProtocol

@@ -68,8 +68,6 @@ void __Init_Data (void);
 * Forward declaration of the default fault handlers.
 *
 *******************************************************************************/
-void WEAK Reset_Handler (void);
-
 void WEAK NMI_Handler (void);
 
 void WEAK HardFault_Handler (void);
@@ -79,8 +77,6 @@ void WEAK MemManage_Handler (void);
 void WEAK BusFault_Handler (void);
 
 void WEAK UsageFault_Handler (void);
-
-void WEAK MemManage_Handler (void);
 
 void WEAK SVC_Handler (void);
 

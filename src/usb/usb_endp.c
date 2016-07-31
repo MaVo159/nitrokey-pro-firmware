@@ -99,3 +99,17 @@ void EP4_IN_Callback (void)
     PrevXferComplete = 1;
     // SwitchSmartcardLED(DISABLE);
 }
+
+/*******************************************************************************
+* NOP callback routines
+*******************************************************************************/
+void EP1_OUT_Callback (void) {}
+void EP3_OUT_Callback (void) {}
+void EP4_OUT_Callback (void) {}
+void EP5_OUT_Callback (void) {}
+void EP6_OUT_Callback (void) {}
+void EP7_OUT_Callback (void) {}
+void EP3_IN_Callback (void) {}
+void EP5_IN_Callback (void) {}
+void EP6_IN_Callback (void) {}
+void EP7_IN_Callback (void) {}

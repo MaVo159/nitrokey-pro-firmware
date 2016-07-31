@@ -25,17 +25,6 @@
 /* Includes ------------------------------------------------------------------ */
 /* Exported types ------------------------------------------------------------ */
 
-/* Exported constants -------------------------------------------------------- */
-#define USB_CCID_Storage_GetConfiguration          NOP_Process
-// #define USB_CCID_Storage_SetConfiguration NOP_Process //
-#define USB_CCID_Storage_GetInterface              NOP_Process
-#define USB_CCID_Storage_SetInterface              NOP_Process
-#define USB_CCID_Storage_GetStatus                 NOP_Process
-#define USB_CCID_Storage_ClearFeature              NOP_Process  //
-#define USB_CCID_Storage_SetEndPointFeature        NOP_Process
-#define USB_CCID_Storage_SetDeviceFeature          NOP_Process
-#define USB_CCID_Storage_SetDeviceAddress          NOP_Process  //
-
 /* CCID Storage Requests */
 /*
    #define GET_MAX_LUN 0xFE #define CCID_STORAGE_RESET 0xFF #define LUN_DATA_LENGTH 1 */
